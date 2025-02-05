@@ -68,7 +68,7 @@ if(num >= 10 && num <= 20) {
 console.log("------ex7------")
 let nume = Number(prompt("Digite um número:"))
 
-if(nume < 10 || nume > 100) {
+if(nume <= 10 || nume >= 100) {
     console.log("O número é aceito")
 } else if (nume == 50){
     console.log("O número não é aceito")
