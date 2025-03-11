@@ -12,7 +12,7 @@ function mudarTexto(){
     texto.innerText = "Texto alterado"
 }
 
-function mudarCor(){
+function mudaCor(){
     texto.style.color = "white"
     document.body.style.backgroundColor = "black"
 }
