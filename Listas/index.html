@@ -10,6 +10,13 @@
             width: 200px;
             height: 200px;
         }
+        .caixa {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 10px auto;
+            background-color: black;
+        }
     </style>
 </head>
 <body>
@@ -35,7 +42,7 @@
     <p id="para3">Paragrafo 3</p>
     <button id="bt3">Clique aqui</button> -->
 
-    <h1 id="titulo">Exercicio 1</h1>
+    <!-- <h1 id="titulo">Exercicio 1</h1>
     <button id="botton">Clique aqui</button>
 
     <h1 id="titulo">Exercicio 2</h1>
@@ -64,8 +71,51 @@
     <h1 id="titulo">Exercicio 6</h1>
     <div id="divi"></div>
     <button id="bot">Círculo</button>
-    <button id="bot1">Quadrado</button>
+    <button id="bot1">Quadrado</button> -->
+    <h1 id="titutlo">Exercicio 1</h1>
+    <p id="sumir">Esse texto vai sumir</p>
+    <button onclick="aparece()">Ocultar e Mostrar Texto</button>
 
-    <script src="lista-14.js"></script>
+    <h1 id="titutlo">Exercicio 2</h1>
+    <p id="texto">Texto </p>
+    <button onclick="mudarTexto()">Clique</button>
+    <button onclick="mudarCor()">Cor</button>
+    <input type="text" id="campo" oninput="trocarFundo()">
+
+    <h1 id="titutlo">Exercicio 3</h1>
+    <p id="informacoes">Meu nome é ______, tenho __ anos, moro em ______, estudo no _____ e faço o curso de ____________.</p>
+    <button onclick="completarInformacoes()">Completar</button>
+
+    <h1 id="titulo">Exercicio 4</h1>
+    <p id="pais">Brasil</p>
+    <button onclick="trocarCor()">Trocar Cor</button>
+
+    <h1 id="titulo">Exercicio 5</h1>
+    <button onclick="mostrarAlerta()">Não clique</button>
+
+    <h1 id="titulo">Exercicio 6</h1>
+    <p id="premio">Escolha uma porta e receba seu prêmio</p>
+    <button onclick="escolherPorta(1)">Porta 1</button>
+    <button onclick="escolherPorta(2)">Porta 2</button>
+    <button onclick="escolherPorta(3)">Porta 3</button>
+    <div id="imagem"></div>
+
+    <h1 id="titulo">Exercicio 7</h1>
+    <img id="Imagemp" src="ponei.png" alt="Imagem d" style="width: 300px; height: auto;">
+    <button onclick="redimensionarImagem()">Redimensionar</button>
+
+    <h1 id="titulo">Exercicio 8</h1>
+    <h1>Controle de Divs</h1>
+    <div id="div1" class="caixa"></div>
+    <div id="div2" class="caixa"></div>
+    <div id="div3" class="caixa"></div>
+    <button onclick="mudarCor()">Clique Aqui</button>
+
+    <h1 id="titulo">Exercicio 9</h1>
+    <img src="1.png" alt="" width="250px" height="400px" onmouseover="troca1()" onmouseleave="destroca1()" id="imagem1">
+    <img src="2.png" alt="" width="250px" height="400px" onmouseover="troca2()" onmouseleave="destroca2()" id="imagem2">
+    <img src="3.png" alt="" width="250px" height="400px" onmouseover="troca3()" onmouseleave="destroca3()" id="imagem3">
+
+    <script src="lista-15.js"></script>
 </body>
 </html>
