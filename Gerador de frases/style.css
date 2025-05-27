@@ -1,0 +1,45 @@
+    body {
+      font-family: Poetsen One;
+      background: linear-gradient(to right, #99def3, #d5a0e5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      position: relative;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+      font-size: 35px;
+    }
+
+    .frase {
+      font-family: Cal Sans;
+      font-size: 1.5em;
+      text-align: center;
+      margin: 30px;
+      color: #4a148c;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      transition: all 0.3s ease;
+    }
+    button {
+      font-family: Cal Sans;
+      padding: 12px 24px;
+      font-size: 1.2em;
+      background-color: #7e57c2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      transition:  0.3s;
+    }
+
+    button:hover {
+      background-color: #5e35b1;
+    }

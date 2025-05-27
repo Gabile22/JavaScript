@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Poetsen+One&display=swap');
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Frases Motivacionais</h1>
+    <div class="frase" id="frase">Clique no botão!</div>
+
+  <button onclick="mostrarFrase()">Nova Frase</button>
+
+    <script>
+        const frases = [
+            "Você não precisa ser perfeito, só precisa começar.",
+            "A coragem é a chave para abrir qualquer porta.",
+            "Cada pequeno passo te aproxima do seu grande sonho.",
+            "Desistir não é uma opção para quem nasceu para vencer.",
+            "Foque no progresso, não na perfeição.",
+            "As maiores conquistas começam com o primeiro esforço.",
+            "Você é capaz de coisas incríveis.",
+            "Pense positivo, aja com propósito, vença com consistência.",
+            "Os desafios de hoje são os degraus do sucesso de amanhã.",
+            "Acredite: o seu esforço ainda vai te surpreender!"
+        ];
+
+        function mostrarFrase() {
+            const aleatoria = frases[Math.floor(Math.random() * frases.length)];
+            document.getElementById("frase").textContent = aleatoria; 
+        }
+
+    </script>
+
+</body>
+</html>
