@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Poetsen+One&display=swap');
+</style>
+</head>
+<body>
+    <div class="container">
+        <img class="img2" src="img/img2.png" alt="">
+
+        <div class="conteudo">
+            <h1 class="titulo">Contagem Regressiva para o dia das mães</h1>
+
+            <div id="contador">
+                <p id="dias"></p>
+                <p id="horas"></p>
+                <p id="minutos"></p>
+                <p id="segundos"></p>
+            </div>
+
+            <div class="barra-container">
+                <div id="barra-progresso"></div>
+            </div>
+        </div>
+
+    <img class="imgp" src="img/img2.png" alt="">
+    </div>
+<audio id="somFogos" src="som/crowd-cheers-314919.mp3" preload="auto"></audio>
+    
+    <script>
+
+    document.addEventListener('click', () => {
+      const som = document.getElementById("somFogos");
+      som.play().then(() => {
+        som.pause(); 
+        som.currentTime = 0;
+        somLiberado = true;
+      }).catch(() => {});
+    });
+
+    function formatarNumero(numero) {
+      return numero < 10 ? '0' + numero : numero;
+    }
+
+    const intervalo = setInterval(atualizarContador, 1000);
+    function atualizarContador() {
+      const agora = new Date();
+      const dataInicio = new Date(2025, 4, 12); 
+      const dataAlvo = new Date(2026, 4, 12); 
+      const diferenca = dataAlvo - agora;
+
+    if (diferenca <= 0) {
+        document.getElementById("contador").innerHTML = "<p> 🎉Feliz dia das mães!🎉</p>";
+        document.getElementById("barra-progresso").style.width = "100%";
+        document.getElementById("somFogos").play()
+        clearInterval(intervalo);
+        return;
+    }
+
+      const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+      document.getElementById("dias").textContent = formatarNumero(dias) + "d";
+      document.getElementById("horas").textContent = formatarNumero(horas) + "h";
+      document.getElementById("minutos").textContent = formatarNumero(minutos) + "m";
+      document.getElementById("segundos").textContent = formatarNumero(segundos) + "s";
+
+      const totalTempo = dataAlvo - dataInicio;
+      const progresso = 100 - ((diferenca / totalTempo) * 100);
+      document.getElementById("barra-progresso").style.width = progresso + "%";
+    }
+
+    atualizarContador();
+  </script>
+
+<div class="imagens">
+  <img class="img3" src="img/direita.png" alt="">
+  <img class="img4" src="img/esquerda.png" alt="" >
+
+</div>
+</body>
+</html>
