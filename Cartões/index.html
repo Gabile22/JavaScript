@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartões Coloridos</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Poetsen+One&display=swap');
+        .container {
+            width: 400px;
+            height: 250px;
+            perspective: 1000px;
+            margin: 10px;
+            display: inline-block;
+        }
+        .cartao {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+        .cartao.virado {
+            transform: rotateY(180deg);
+        }
+        .frente, .verso {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+        .verso {
+            transform: rotateY(180deg);
+            text-align: center;
+            color: black;
+            font-family: Cal Sans;
+        }
+        h1 {
+            text-align: center;
+            font-family: Cal Sans;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cartões</h1>
+
+    <div class="container">
+        <div class="cartao" id="cartao1">
+            <div class="frente">
+                <img src="img/1aniversario.png" alt="" style="width: 100%; height:100%; border-radius: 15px; object-fit: cover">
+            </div>
+            <div class="verso" id="verso1" style="background: linear-gradient(to right, #c2faee, #ebc5f7);">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="cartao" id="cartao2">
+            <div class="frente">
+                <img src="img/2natal.png" alt="" style="width: 100%; height:100%; border-radius: 15px; object-fit: cover">
+            </div>
+            <div class="verso" id="verso2" style="background: linear-gradient(to right, #f5b7b7, #c2f1bc);">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="cartao" id="cartao3">
+            <div class="frente">
+                <img src="img/3dia das maes.png" alt="" style="width: 100%; height:100%; border-radius: 15px; object-fit: cover">
+            </div>
+            <div class="verso" id="verso3" style="background: linear-gradient(to right, #fcc5d3, #f8c5e5);">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="cartao" id="cartao4">
+            <div class="frente">
+                <img src="img/4dia dos namorados.png" alt="" style="width: 100%; height:100%; border-radius: 15px; object-fit: cover">
+            </div>
+            <div class="verso" id="verso4" style="background: linear-gradient(to right, #f7b5b5, #e5a0ce);">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="cartao" id="cartao5">
+            <div class="frente">
+                <img src="img/5ano novo.png" alt="" style="width: 100%; height:100%; border-radius: 15px; object-fit: cover">
+            </div>
+            <div class="verso" id="verso5" style="background: linear-gradient(to right, #fcfbca, #f8d0b5);">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="cartao" id="cartao6">
+            <div class="frente">
+                <img src="img/6pascoa.png" alt="" style="width: 100%; height:100%; border-radius: 15px; object-fit: cover">
+            </div>
+            <div class="verso" id="verso6" style="background: linear-gradient(to right, #aa8f71, #fcbde0);">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="cartao" id="cartao7">
+            <div class="frente">
+                <img src="img/7dia do professores.png" alt="" style="width: 100%; height:100%; border-radius: 15px; object-fit: cover">
+            </div>
+            <div class="verso" id="verso7" style="background: linear-gradient(to right, #b6cff3, #89859c);">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="cartao" id="cartao8">
+            <div class="frente">
+                <img src="img/8desculpa.png" alt="" style="width: 100%; height:100%; border-radius: 15px; object-fit: cover">
+            </div>
+            <div class="verso" id="verso8" style="background: linear-gradient(to right, #c1eefc, #d2c3f3);">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="cartao" id="cartao9">
+            <div class="frente">
+                <img src="img/9motivacional.png" alt="" style="width: 100%; height:100%; border-radius: 15px; object-fit: cover">
+            </div>
+            <div class="verso" id="verso9" style="background: linear-gradient(to right, #5b5d5e, #f7e5c0);">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="cartao" id="cartao10">
+            <div class="frente">
+                <img src="img/10festa junina.png" alt="" style="width: 100%; height:100%; border-radius: 15px; object-fit: cover">
+            </div>
+            <div class="verso" id="verso10" style="background: linear-gradient(to right, #f8ebc0, #bcf4f8);">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const mensagens = [
+            "Que seu dia seja repleto de alegria, amor e boas surpresas. Feliz aniversário!",
+            "Que a magia do Natal ilumine seu coração com paz, amor e esperança.",
+            "Mãe, seu amor é meu maior presente. Feliz Dia das Mães!",
+            "Ao seu lado, cada dia é especial. Feliz Dia dos Namorados, meu amor!",
+            "Que o novo ano traga novos sonhos, conquistas e muita felicidade!",
+            "Que a Páscoa renove nossa fé, esperança e amor. Feliz Páscoa!",
+            "Obrigado(a) por ensinar com dedicação e transformar vidas. Feliz Dia do Professor!",
+            "Sinto muito. Errei, mas espero de coração poder consertar e seguir em paz com você.",
+            "Acredite em você. Grandes conquistas começam com pequenos passos!",
+            "Pula fogueira, coração aquece! Que sua festa seja cheia de alegria e sabor!"
+        ];
+
+        for (let i = 1; i <= 10; i++) {
+            const cartao = document.getElementById(`cartao${i}`);
+            const verso = document.getElementById(`verso${i}`);
+            verso.textContent = mensagens[i - 1];
+            cartao.addEventListener("click", () => {
+                cartao.classList.toggle("virado");
+            });
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to bottom, #e5f6ff, #d6e4f0);
+    background-image: url('img/fundo.png');
+    background-size: cover;
+    background-position: center;
+    color: #2e2e2e;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #b3d9ff;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    font-family: Cal Sans;
+    font-size: 2rem;
+    color: #c9a341; 
+    margin-bottom: 10px;
+}
+
+.intro1 {
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: -70px;
+    color: #5d8aa8; 
+}
+
+.intro2 {
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #5d8aa8; 
+}
+
+input[type="number"] {
+    padding: 10px;
+    font-size: 1rem;
+    width: 80%;
+    border: 2px solid #b0e0e6; 
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    background-color: #f0f8ff;
+    color: #000;
+}
+
+#caixaImagem {
+    margin-top: -125px;
+    margin-bottom: -200px;
+}
+
+.palpites, .tentativas {
+    font-size: 18px;
+}
+
+button {
+    background-color: #c9a341;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #949494; 
+}
+
+#mensagem {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    min-height: 40px;
+    color: #666;
+}
+
+#tentativas {
+    font-weight: bold;
+    color: #5d8aa8; 
+    font-size: 1.1rem;
+}
